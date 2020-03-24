@@ -1,0 +1,13 @@
+{{ define "main" }}
+<h1>Regular</h1>
+{{ range .Site.RegularPages }}
+    {{ .Params.name }}
+    {{ .Content }}
+{{ end }}
+<h2>Pages</h2>
+{{ range .Data.Pages }}
+    {{ .Name }}
+{{ end }}
+{{ .GitInfo }}
+<!-- {{ .Content }} -->
+{{ end }}
