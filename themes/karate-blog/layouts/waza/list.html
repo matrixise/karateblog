@@ -1,0 +1,10 @@
+{{ define "main" }}
+{{ .Content }}
+
+<ul>
+{{ range sort .Site.RegularPages ".Params.Order" }}
+    <li>{{ .Params.Name }} ({{ .Params.Level }})</li>
+
+{{ end }}
+</ul>
+{{ end }}

@@ -1,13 +1,14 @@
 {{ define "main" }}
 <h1>Regular</h1>
-{{ range .Site.RegularPages }}
-    {{ .Params.name }}
-    {{ .Content }}
+<h2>Katas</h2>
+<ul>
+{{ range (where .Site.RegularPages "Section" "=" "kata") }}
+<li><a href="{{ .RelPermalink }}">{{ .Params.name }}</a></li>
 {{ end }}
+</ul>
 <h2>Pages</h2>
 {{ range .Data.Pages }}
     {{ .Name }}
 {{ end }}
-{{ .GitInfo }}
 <!-- {{ .Content }} -->
 {{ end }}

@@ -1,0 +1,4 @@
+{{ $waza := .Get 0 }}
+{{ $name := .Get 1 }}
+{{ $url := printf "/waza/%s.md" $waza }}
+<a href="{{ (.Site.GetPage $url).RelPermalink }}">{{ $name }}</a>

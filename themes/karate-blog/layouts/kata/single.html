@@ -1,0 +1,18 @@
+{{ define "main" }}
+Kata: {{ .Params.Name }}
+<div>
+    {{ .Content }}
+    <h2>Waza</h2>
+    {{ .Params.waza }}
+
+    {{ $waza := "gedan-barai" }}
+    {{ $url := printf "/waza/%s.md" $waza }}
+    URL {{ $url }}
+    {{ with .GetPage $url }}
+        {{ .Params.Name }}
+        {{ .RelPermalink }}
+    {{ end }}
+
+    {{ .HasShortcode "waza" }}
+</div>
+{{ end }}
