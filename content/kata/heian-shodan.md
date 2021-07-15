@@ -1,9 +1,8 @@
 ---
 name: Heian Shodan
-date: 2020-03-01T22:12:51-06:00
 description: Heian Shodan
 draft: false
-order: 1
+weight: 1
 level: basic
 waza: [
     gedan-barai,
@@ -14,7 +13,14 @@ count: 21
 kiai: [9, 17]
 ---
 
-# Techniques
+# Mouvements
 
-* {{< waza "gedan-barai" "gedan barai" >}}
-
+1. {{< waza "gedan-barai" "gedan barai" >}}
+2. {{< waza "oi-tsuki" "oi-tsuki" >}}
+3. {{< waza "gedan-barai" "gedan barai" >}}
+4. {{< waza "tetsui" "tetsui" >}}
+5. {{< waza "oi-tuski" "oi-tsuki" >}}
+6. {{< waza "gedan-barai" "gedan-barai" >}}
+7. {{< waza "jodan-age-uke" "jodan-age-uke" >}}
+8. {{< waza "jodan-age-uke" "jodan-age-uke" >}}
+9. {{< waza "jodan-age-uke" "jodan-age-uke" >}}

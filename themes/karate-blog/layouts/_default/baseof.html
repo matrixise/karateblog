@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
-    {{- partial "head.html" . -}}
+    <head>
+        {{- partial "head.html" . -}}
+    </head>
     <body>
+        <a href="/">Start</a>
         {{- partial "header.html" . -}}
         <div id="content">
         {{- block "main" . }}{{- end }}

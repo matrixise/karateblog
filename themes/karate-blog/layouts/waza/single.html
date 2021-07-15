@@ -1,7 +1,12 @@
 {{ define "main" }}
-Waza: {{ .Params.Name }}
+<h2>Waza: {{ .Title }}</h2>   
 <div>
     {{ .Content }}
-    {{ .Params.Kata }}
+    <ul>
+
+    {{ range .Params.Kata }}
+        <li>{{ . }}</li>
+    {{ end }}
+</ul>
 </div>
 {{ end }}

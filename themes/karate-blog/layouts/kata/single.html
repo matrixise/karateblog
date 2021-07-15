@@ -2,17 +2,14 @@
 Kata: {{ .Params.Name }}
 <div>
     {{ .Content }}
-    <h2>Waza</h2>
-    {{ .Params.waza }}
 
-    {{ $waza := "gedan-barai" }}
-    {{ $url := printf "/waza/%s.md" $waza }}
-    URL {{ $url }}
-    {{ with .GetPage $url }}
-        {{ .Params.Name }}
-        {{ .RelPermalink }}
+    <ul>
+    {{ range .Params.Waza }}
+        <li>
+            {{ $url := printf "/waza/%s.md" . }}
+            {{ with $.GetPage $url }}<a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ else }}{{ . }}{{ end }}
+        </li>
     {{ end }}
-
-    {{ .HasShortcode "waza" }}
+    </ul>
 </div>
 {{ end }}

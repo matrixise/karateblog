@@ -1,5 +1,5 @@
 ---
-name: Gedan Barai
+title: Gedan Barai
 kata: [
     heian-shodan,
     heian-nidan

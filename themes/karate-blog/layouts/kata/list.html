@@ -1,9 +1,23 @@
 {{ define "main" }}
+
 {{ .Content }}
 
-<ul>
-{{ range sort .Site.RegularPages ".Params.Order" }}
-    <li>{{ .Params.Name }} ({{ .Params.Level }})</li>
-{{ end }}
-</ul>
+<table>
+    <thead>
+        <tr>
+            <th>Kata</th>
+            <th>Level</th>
+            <th>Count</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{ range $.Pages }}
+        <tr>
+            <td><a href="{{ .RelPermalink }}">{{ .Params.Name }}</a></td>
+            <td>{{ .Params.Level }}</td>
+            <td>{{ .Params.Count }}</td>
+        </tr>
+        {{ end }}
+    </tbody>
+</table>
 {{ end }}
